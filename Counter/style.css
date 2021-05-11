@@ -22,7 +22,7 @@ body, html, p {
   color:rgb(13, 43, 13);
   margin-bottom: 40px;
 }
-.container-btn {
+.btn-container {
   max-width: 650px;
   display: flex;
   justify-content: space-between;
