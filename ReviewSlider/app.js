@@ -34,8 +34,7 @@ const author = document.querySelector("#author");
 const authorJob = document.querySelector("#job");
 const authorReview = document.querySelector("#info");
 
-const prevBtn = document.querySelector(".btn-prev");
-const nextBtn = document.querySelector(".btn-next");
+const btns = document.querySelector(".btn-container");
 const randomBtn = document.querySelector(".btn-random");
 
 let currentIndex = 0; 
@@ -43,31 +42,26 @@ window.addEventListener("DOMContentLoaded", function() {
   personInfo(currentIndex);
 });
 
-nextBtn.addEventListener("click", function() {
-  if (currentIndex < personArr.length - 1) {
-    currentIndex++;
+btns.addEventListener("click", function(e) {
+  if (e.target.classList.contains("btn-prev")) {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = personArr.length - 1;
+    }
     personInfo(currentIndex);
-  } else {
-    currentIndex = 0;
+  } else if (e.target.classList.contains("btn-next")) {
+    currentIndex++;
+    if (currentIndex > personArr.length - 1) {
+      currentIndex = 0;
+    }
     personInfo(currentIndex);
   }
 });
-
-prevBtn.addEventListener("click", function() {
-  if (currentIndex === 0) {
-    currentIndex = personArr.length - 1;
-    personInfo(currentIndex);
-  } else {
-    currentIndex--;
-    personInfo(currentIndex);
-  }
-})
 
 randomBtn.addEventListener("click", function() {
   currentIndex = Math.floor(Math.random()*personArr.length);  
   personInfo(currentIndex);
 })
-
 
 function personInfo(personIndex) {
   authorPhoto.src = personArr[personIndex].src; 
