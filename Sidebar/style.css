@@ -1,0 +1,96 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  background: rgb(209, 243, 209);
+  color: #333;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.btn-toggle {
+  position: fixed;
+  top: 10px;
+  left: 450px;
+  outline: none;
+}
+.btn-toggle:hover {
+  cursor: pointer;
+}
+.btn-toggle.active .btn-icon {
+  transform: rotate(90deg);
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;  
+  background-color: pink;
+  transform: translate(-100%);
+  transition: all 1s ease;
+}
+
+.sidebar.show {
+  transform: translate(0);
+}
+
+.title {
+  text-transform: capitalize;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.nav {
+  padding: 10px;
+  margin-bottom: 100px;
+}
+.nav__item {
+  padding: 5px;
+  margin-bottom: 10px; 
+  transition: all 0.3s ease; 
+}
+.nav-item:last-child {
+  margin-bottom: 0;
+}
+.nav__item.active {
+  background-color: rgb(231, 154, 167);
+}
+.nav__item.active .nav__link {
+  font-weight: 700;
+}
+
+.social {
+  justify-self: flex-end;
+  display: flex;
+  padding: 10px;  
+}
+.social__item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.social__item:last-child {
+  margin-right: 0;
+}
+.social__icon, .btn-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill:rgb(66, 34, 155);  
+  transition: all 0.1s ease;
+}
+.social__icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
