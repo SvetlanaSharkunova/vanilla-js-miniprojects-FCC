@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+body, html, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title {
+  font-size: 60px;
+  color:rgb(13, 43, 13);
+  text-transform: uppercase;
+}
+.countNumber {
+  font-size: 100px;
+  color:rgb(13, 43, 13);
+  margin-bottom: 40px;
+}
+.btn-container {
+  max-width: 650px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.btn {
+  width: 200px;
+  font-size: 20px;
+  color: #fff;
+  border: 2px solid green;
+  background-color: rgb(98, 207, 98);
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(13, 43, 13);
+}
