@@ -76,12 +76,20 @@ body, html {
 .menu-item:nth-child(even) {
   margin-right: 0px;
 }
-.menu-img {
-  object-fit: cover;
+.menu-imgblock {
   width: 250px;
   height: 200px;
+  border: 2px solid green;
+}
+.menu-img {  
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
   border: 4px solid var(--clr-gold);
   border-radius: var(--radius);  
+}
+.menu-item-body {
+  border: 2px solid orange;
 }
 .menu-item-header {
   display: flex;
