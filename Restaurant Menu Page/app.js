@@ -58,10 +58,12 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 function displayMenuItems(menuItems) {
-  
+
   let displayMenu = menuItems.map(function(menuItem) {
     return `<article class="menu-item"> 
-    <img class="menu-img" src=${menuItem.img}>
+    <div class="menu-imgblock">
+      <img class="menu-img" src=${menuItem.img} alt="">
+    </div>
       <div class="menu-item-body">
         <div class="menu-item-header">
           <h3 class="menu-item-title">${menuItem.category}</h3>
