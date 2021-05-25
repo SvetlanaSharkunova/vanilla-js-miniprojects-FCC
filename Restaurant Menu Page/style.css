@@ -78,18 +78,15 @@ body, html {
 }
 .menu-imgblock {
   width: 250px;
-  height: 200px;
-  border: 2px solid green;
+  height: 200px;  
+  flex-shrink: 0;  
 }
-.menu-img {  
+.menu-img {
   width: 100%;
   height: 100%;
   object-fit: cover; 
   border: 4px solid var(--clr-gold);
   border-radius: var(--radius);  
-}
-.menu-item-body {
-  border: 2px solid orange;
 }
 .menu-item-header {
   display: flex;
